@@ -1,0 +1,24 @@
+import java.util.Arrays;
+public class FindEvenNumbers{
+ 
+    public static void main(String[] args){
+       int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+       int[]  evenNumber = Arrays.stream(numbers).filter((num) -> FindEvenNumbers.isPrime(num)).toArray();
+
+       System.out.println(Arrays.toString(evenNumber));
+    }
+private static boolean isPrime(int num){
+    if(num < 2)
+    {
+        return false;
+    }
+    for (int i = 2; i <=num/2;i++)
+    {
+        if(num % i ==0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+}
