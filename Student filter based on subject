@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.*;
+record  Student(String name, String  book){
+
+}
+public class StudentFilter{
+    public static void main(String[] args){
+        ArrayList<Student> details = new ArrayList<>();
+        details.add(new Student("Alice","java"));
+        details.add(new Student("Sonu","JavaScript"));
+        details.add(new Student("Hilal","java"));
+        details.add(new Student("Redwin","java"));
+
+        details.stream().filter(prod -> prod.book().equals("java")).forEach((val)->System.out.println(val.name()));
+
+        
+    }
+}
